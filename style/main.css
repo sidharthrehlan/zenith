@@ -1,0 +1,82 @@
+/* 
+Blitz Premium Template - CSS File
+USE THIS STYLE SHEET FOR HOMEPAGE
+*/
+#slidecontainer{width:100%; height:286px; position:relative}
+#slideshow{height:auto; background:none; overflow:hidden; background-color:#eeeeee;width: auto;}
+#slideshow h1{padding:10px 0px 0px 0px;
+float: left;
+width: 400px;
+}
+.cycle {
+    clear: both;
+    height: auto;
+    padding-right: 20px;
+    vertical-align: middle;
+    width: auto;
+}
+#slideshow_navigation a{
+    background: url(../media/button.png) no-repeat scroll 50% 50%;
+    display:block;
+    float:left;
+    font-size:0px;
+    width:12px;
+    height:10px;
+    margin:1px;
+    outline-style:none;
+    outline-width:medium;
+    padding:0px;
+}
+#slideshow_navigation{position:absolute; right:15px; top:255px; z-index:800; cursor:pointer}
+#slideshow_navigation .activeSlide {background: url(../media/button_selected.png) no-repeat scroll 0% 50%;}
+.slide_image {
+    float: left;
+    margin-right: 20px;
+    margin-top: 0;
+    width: 450px;
+    height:287px;
+}
+
+
+#slideshow_navigation a {
+    background: url("../media/button.png") no-repeat scroll 50% 50% rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    font-size: 0;
+    height: 10px;
+    margin: 1px;
+    outline-style: none;
+    outline-width: medium;
+    padding: 0;
+    width: 12px;
+}
+a {
+    color: #0099CC;
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+#slideshow_navigation {
+    cursor: pointer;
+}
+.cycle > ul {
+    float: left;
+    width: 400px;
+}
+
+.zaccordian h3.arrow-right span {
+    background: url("../media/arrow_blue.png") no-repeat scroll 1px -1px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 13px;
+    width: 20px;
+}
+.zaccordian h3.arrow-down span {
+    background : url("../media/arrow_blue.png") no-repeat scroll -22px -1px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 13px;
+    width: 20px;
+}
+
+/* Editable Slider Image Position */
