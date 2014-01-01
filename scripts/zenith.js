@@ -24,8 +24,7 @@
           
           var header = this.find(settings.header);
           header.css({
-            "cursor":"pointer",
-            "color":"#0099CC"
+            "cursor":"pointer"
           });
           header.addClass("arrow-right");
           if(settings.ishide == true){

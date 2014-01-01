@@ -13,7 +13,7 @@
 					<h1>About Us</h1>
 					<div id="maintext">
 					   <!-- Accordian Element 1 -->
-                       <div class="zaccordian">
+                       <div class="zaccordian yellow-header">
                            <h3><span></span> Our Vision</h3>
                            <div>
                                <ul>

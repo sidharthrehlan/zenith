@@ -2,7 +2,8 @@
 	<!-- BEGIN SLIDE -->
 	<div id="slide">
 		 <div id="slideshow">  
-			  <div class="cycle">
+
+			  <div class="cycle green">
 				 <img class="slide_image" alt="Educational Training Solutions" title="Educational Training Solutions" src="<?php echo base_url()?>media/banner/education_solutions.jpg" />
 				 <h1>Educational Training Solutions</h1>
                  <ul>
@@ -13,7 +14,7 @@
                  </ul>
 			  </div><!-- end of cycle1 -->
 			  
-			  <div class="cycle">
+			  <div class="cycle blue">
 				 <img class="slide_image" alt="Content Solutions" title="Content Solutions" src="<?php echo base_url()?>media/banner/content_solutions.jpg" />
 				 <h1>Content Solutions</h1>
                  <ul>
@@ -26,7 +27,7 @@
                  </ul>
      		  </div><!-- end of cycle2 -->
 
-			  <div class="cycle">
+			  <div class="cycle yellow">
 				 <img class="slide_image" alt="Consulting" title="Consulting" src="<?php echo base_url()?>media/banner/consulting.png" />
 				 <h1>Consulting</h1>
                  <ul>
@@ -35,8 +36,8 @@
                     <li>Training Requirement Assessment</li>
                  </ul>
 			  </div><!-- end of cycle3 -->
-              
-              <div class="cycle">
+             
+              <div class="cycle purple">
 				 <img class="slide_image" alt="Corporate Training Solutions" title="Corporate Training Solutions" src="<?php echo base_url()?>media/banner/corporate_solutions.jpg" />
 				 <h1>Corporate Training Solutions</h1>
                  <ul>

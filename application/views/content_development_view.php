@@ -25,7 +25,7 @@
                             <div><a href="<?php echo base_url(); ?>document/content_development_process.pdf">Read our content development process in detail</a></div>
                        </div>
                        <h3>Our bouquet of content related services contains</h3>
-                       <div class="zaccordian">
+                       <div class="zaccordian blue-header">
                            <!-- Accordian Element 1 --> 
                            <h3><span></span> Topic Specific Content Development Solutions</h3>
                            <div>

@@ -4,11 +4,17 @@ Blitz Premium Template - CSS File
 
 */
 
+@font-face {
+	font-family: 'ArialRound';
+	src: url('./font/arialRound/arialRound.eot');
+	src: local('arialRound'), url('./font/arialRound/arialRound.woff') format('woff'), url('./font/arialRound/arialRound.ttf') format('truetype');
+}
+
 
 /*** GLOBAL  ***/
 html,body{height:100%;}
 body {
-	font-family:Verdana, Arial, Tahoma;
+	font-family:ArialRound, Verdana, Arial, Tahoma;
 	font-size:13px; /*11px */
 	margin:0 auto;
 	padding:0;
@@ -61,8 +67,8 @@ h5, h6 {font-size:14px; line-height:15px;}
 
 /* links */
 a{font-size:13px;}
-a {color:#0099cc; text-decoration:none;}
-a:hover{color:#0fb2e8; text-decoration:none;}
+a {color:#009400; text-decoration:none;}
+a:hover{color:#77CB76; text-decoration:none;}
 a img{border:none}
 .border{ border:1px solid #c5c5c5; padding:3px;}
 .imgleft{float:left; margin-right:15px;}
@@ -137,7 +143,7 @@ padding:5px 0px 0px 0px
 #topmenu ul li{list-style-type:none; margin:0px; padding:0px 10px 0px 25px; float:left;}
 #topmenu ul li span{display:block; font-size:12px;}
 #topmenu ul li a, #topmenu ul li a:visited{color:#fff; display:block; padding-left:10px; }
-#topmenu ul li a {font-size:18px; font-family:"Trebuchet MS", Arial, Tahoma;line-height: 33px;}
+#topmenu ul li a {font-size:18px;line-height: 33px;}
 #topmenu ul li a.active{background-image:url(../media/arrow.gif); background-repeat:no-repeat; background-position:0px 12px;}
 #topmenu ul li a:hover{color:#fff; text-decoration:none; background-image:url(../media/arrow.gif); background-repeat:no-repeat; background-position:0px 12px;}
 /*** END TOP ***/
@@ -251,4 +257,23 @@ h1,h2,h3,h4,h5,h6{ text-transform: capitalize;}
     border-radius:6px;
     }
     
-.box h2{ background-image:url("../media/home-box-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+.box h2{ background:url("../media/home-box-sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);padding-left:58px;margin-bottom: 0;line-height: 55px;}
+
+.green,.green h1 {color:#009400;}
+.yellow,.yellow h1  {color:#FFAD03;}
+.blue, .blue h1{color:#0E3884;}
+.purple, .purple h1{color:#C8A0DD;}
+
+.green-header h3 {color:#009400;}
+.yellow-header h3 {color:#FFAD03;}
+.blue-header h3 {color:#0E3884;}
+.purple-header h3 {color:#C8A0DD;}
+
+.education-train-box h2{background-position: 0 14px;}
+.online-train-box h2{background-position: 0 -48px;}
+.content-solution-box h2{background-position: 0 -123px;}
+.consulting-box h2{background-position: 0 -185px;}
+.corporate-box h2{background-position: 0 -245px;}
+.train-trainer-box h2{background-position: 0 -298px;}
+
+

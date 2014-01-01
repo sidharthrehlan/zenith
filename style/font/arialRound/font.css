@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'arialRound';
+	src: url('./arialRound.eot');
+	src: local('arialRound'), url('./arialRound.woff') format('woff'), url('./arialRound.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_6898">Text with this font applied</p> */
+.fontsforweb_fontid_6898 {
+	font-family: 'arialRound' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
