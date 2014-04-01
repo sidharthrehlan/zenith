@@ -10,9 +10,11 @@
  ?>
             <div id="maincontent">
 				<div id="content">
-					<h1>About Us</h1>
+					<h1>Contact Us</h1>
 					<div id="maintext">
-					 <p>Lipson,,,,,</p>  
+					 <p>230, R.G. Mall, Sector-9, Rohini, Delhi-110085</p>
+                     <p>(Opp. Dharam Kunj Apartment)</p>
+                     <p>Ph: 011 - 42542992,+91 9650103203</p>  
 					</div><!-- end maintext -->
 				</div><!-- end content -->
 			</div><!-- end maincontent -->
