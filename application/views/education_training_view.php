@@ -13,7 +13,7 @@
 					<h1>Educational Training Solutions</h1>
 					<div id="maintext">
 					   <p>Zenith are experts of training with experience of teaching and training of more than a decade and an experience of teaching more than 15,000 students. Zenith specializes in aptitude training, personality development training, technical training and train the trainers program. We are the only company to provide company specific placement trainings. Zenith has a pool of trainers who have immense and proven experience in training. Our trainers experience varies from 25 years to 6 years with an average experience of around 8 years. </p>
-                       <h3>Our training programs are:</h3>
+                       <h3>Our training programs are</h3>
                       <div class="zaccordian green-header">
                        <!-- Accordian Element 1 --> 
                        <h3 id="aptitude-training"><span></span> Aptitude Training</h3>

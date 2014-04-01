@@ -48,10 +48,10 @@ $route['content-development'] = "home/content_development";
 $route['consulting'] = "home/consulting";
 $route['case-studies'] = "home/case_studies";
 $route['careers'] = "home/careers";
-$route['contactus'] = "home/contact_us";
-$route['gallery'] = "home/gallery";
-$route['testimonial'] = "home/testimonial";
-$route['gallery'] = "home/gallery";
+$route['contactus'] = "home";
+$route['gallery'] = "home";
+$route['testimonial'] = "home";
+$route['gallery'] = "home";
 
 
 /* End of file routes.php */

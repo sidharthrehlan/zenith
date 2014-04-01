@@ -51,7 +51,7 @@
             </div><!-- end box-left -->
             
             <div class="box-right">
-                <h3>right box</h3>
+                <h3></h3>
             </div><!-- end box-right -->
        	</div><!-- end maincontent -->
     </div><!-- end centercolumn -->
