@@ -15,6 +15,9 @@
     <link href="<?php echo base_url();?>style/style.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>style/main.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url();?>style/responsive.css" rel="stylesheet" type="text/css" />
+    <?php if(isset($bootstrapCss) && $bootstrapCss != null){ ?>
+        <link href="<?php echo base_url();?>style/<?php echo $bootstrapCss; ?>" rel="stylesheet" type="text/css" />
+    <?php } ?>
     
     <!--[if IE]>                                                 
     <link href="css/ie.css" rel="stylesheet" type="text/css" />

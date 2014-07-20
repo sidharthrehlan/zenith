@@ -3,10 +3,10 @@ Blitz Premium Template - CSS File
 USE THIS STYLE SHEET FOR HOMEPAGE
 */
 #slidecontainer{width:100%; height:286px; position:relative}
-#slideshow{height:286px !important; background:none; overflow:hidden; background-color:#eeeeee;width: auto !important;}
+#slideshow{height:auto; background:none; overflow:hidden; background-color:#eeeeee;width: auto;}
 #slideshow h1{padding:12px 0px 0px 0px;float: left;text-decoration: underline;text-transform: uppercase;width:55%;margin-bottom:0}
 #slideshow ul li{font-size: 19px;line-height: 29px;}
-.cycle{clear:both;height:auto !important;padding-right:20px;vertical-align:middle;width:auto !important;}
+.cycle{clear:both;height:auto;padding-right:20px;vertical-align:middle;width:auto}
 #slideshow_navigation a{background:url(../media/button.png) no-repeat scroll 50% 50% rgba(0,0,0,0);display:block;float:left;font-size:0;height:10px;outline-style:none;outline-width:medium;width:12px;margin:1px;padding:0}
 #slideshow_navigation{position:absolute;right:15px;top:255px;z-index:800;cursor:pointer}
 #slideshow_navigation .activeSlide{background:url(../media/button_selected.png) no-repeat scroll 0 50%}

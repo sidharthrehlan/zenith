@@ -22,5 +22,8 @@
 ?>
 <script type="text/javascript" src="<?php echo base_url();?>scripts/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>scripts/jquery.cycle.all.min.js"></script>
+<?php if(isset($bootstrapValidateJs) && $bootstrapValidateJs != null){ ?>
+        <script type="text/javascript" src="<?php echo base_url();?>scripts/<?php echo $bootstrapValidateJs; ?>"></script>
+<?php } ?>
 <script type="text/javascript" src="<?php echo base_url();?>scripts/zenith.js"></script>
 </body></html>

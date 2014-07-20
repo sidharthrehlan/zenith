@@ -175,6 +175,46 @@ public function testimonial(){
     }
 
     /**
+       * Home::contactUs()
+       * 
+       * @return
+       */
+    public function info()
+    {
+        $data = array(
+	           'title'=>'Contact Us',
+               'current_page' => 'contact_us',
+               'bootstrapCss' => 'bootstrap.min.css',
+               'bootstrapValidateJs' => 'bootstrapValidator.min.js'
+	        );
+       
+        if(!empty($_POST))
+        {
+            //debug_var($this->input->post());
+            $formData = $this->input->post();
+            $this->form_validation->set_rules('txtName', 'Name', 'trim|required');
+            $this->form_validation->set_rules('txtEmail', 'Email', 'required|valid_email');
+            $this->form_validation->set_rules('txtnumber', 'Contact number', 'trim|required|integer');
+            $this->form_validation->set_rules('txtSub', 'Subject', 'trim|required');
+            $this->form_validation->set_rules('txtMessage', 'Message', 'trim|required');
+            if ($this->form_validation->run() == FALSE)
+            {
+                $this->load->view('info_view',$data);
+            }
+            else
+            {
+                $formData = $this->input->post();
+                $this->_contactUs_mail($formData);
+                $data['msg'] = "Contact request has been sent successfully.";
+                $data['msgType'] = 'pos';
+                $this->load->view('contactus_view',$data);
+            }
+        }
+        else
+            $this->load->view('info_view',$data);
+    }
+
+    /**
      * Home::_contactUs_mail()
      * 
      * @param mixed $formData

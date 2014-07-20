@@ -52,6 +52,7 @@ $route['contactus'] = "home/contact_us";
 $route['gallery'] = "home";
 $route['testimonial'] = "home";
 $route['gallery'] = "home";
+$route['info'] = "home/info";
 
 
 /* End of file routes.php */

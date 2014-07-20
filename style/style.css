@@ -275,5 +275,7 @@ h1,h2,h3,h4,h5,h6{ text-transform: capitalize;}
 .consulting-box h2{background-position: 0 -185px;}
 .corporate-box h2{background-position: 0 -245px;}
 .train-trainer-box h2{background-position: 0 -298px;}
+.infoForm {margin-top:20px;}
+
 
 
