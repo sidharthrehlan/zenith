@@ -51,4 +51,58 @@
     
     $(document).ready(function(){
             $(".zaccordian").zenAccord();
+
+
+  //Bootstrap validate
+  $(document).ready(function() {
+    $('#info').bootstrapValidator({
+        container: 'tooltip',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The first name is required'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email is required'
+                    },
+                    emailAddress : {
+                      message : 'Invalid email id'
+                    }
+                }
+            },
+            mobile: {
+                validators: {
+                    digits: {
+                        message: 'The phone number can contain digits only'
+                    },
+                    notEmpty: {
+                        message: 'The phone number is required'
+                    }
+                }
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
       });      

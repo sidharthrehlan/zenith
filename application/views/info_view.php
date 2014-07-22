@@ -10,29 +10,29 @@
  ?>
 
     <div class="infoForm" id="validatorEnabledForm">
-      <form role="form" class="form-horizontal" name="info" id="info" method="post">
+      <form class="form-horizontal" name="info" id="info" method="post">
           <div  class="form-group">
-            <label for="name" class="col-sm-2 control-label">Name</label>
+            <label class="col-sm-2 control-label">Name</label>
             <div class="col-sm-8 col-md-6">
-              <input class="form-control" type="text" name="name" id="name" require="require" placeholder="Name" />
+              <input class="form-control" type="text" name="name" id="name" placeholder="Name" />
             </div>
           </div><!-- end form-group -->
           <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Email</label>
+            <label class="col-sm-2 control-label">Email</label>
             <div class="col-sm-8 col-md-6">
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" name="email" class="form-control" id="email" placeholder="Email">
             </div>
           </div><!-- end form-group -->
 
           <div class="form-group">
-            <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+            <label class="col-sm-2 control-label">Mobile</label>
             <div class="col-sm-8 col-md-6">
-              <input type="text" class="form-control" id="mobile" placeholder="Mobile">
+              <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
             </div>
           </div><!-- end form-group -->
           
           <div class="form-group">
-            <label for="message" class="col-sm-2 control-label">Message</label>
+            <label class="col-sm-2 control-label">Message</label>
             <div class="col-sm-8 col-md-6">
               <textarea class="form-control" id="mobile" placeholder="Mobile"></textarea>
             </div>
