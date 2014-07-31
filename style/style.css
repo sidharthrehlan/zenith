@@ -117,7 +117,7 @@ code {
 
 /*** CONTAINER ***/
 #top_container{ background-image:url(../media/bg_container_top.gif); background-repeat:repeat-x; background-position:top}
-#top_container_inner{ background-image:url(../media/bg_container_inner_top.gif); background-repeat:repeat-x; background-position:top}
+#top_container_inner{min-height:578px; background-image:url(../media/bg_container_inner_top.gif); background-repeat:repeat-x; background-position:top}
 #bottom_container{ background-image:url(../media/bg_container_bottom.gif); background-repeat:repeat-x; background-color:#efefef; min-height:229px;}
 #footer_container{ background-image:url(../media/bg_container_footer.gif); background-repeat:repeat-x; background-color:#333333; min-height:35px;}
 /*** END OF CONTAINER ***/
@@ -277,5 +277,12 @@ h1,h2,h3,h4,h5,h6{ text-transform: capitalize;}
 .train-trainer-box h2{background-position: 0 -298px;}
 .infoForm {margin-top:20px;}
 
+div.error p.glyphicon-remove {margin:0;} 
 
+div.batch-schedule span.first {
+padding-right: 24px;
+display: inline-block;
+min-width: 128px;
+}
 
+.reg-btn {margin-top:10px;}

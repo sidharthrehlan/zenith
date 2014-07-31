@@ -20,7 +20,7 @@ class Home extends CI_Controller {
 
         parent::__construct();
 		$this->load->helper(array('url'));
-		//$this->load->library(array('form_validation','message','email','utility'));
+		$this->load->library(array('form_validation','email','recaptcha','utility'));
         //$this->load->model(array('cms_model'));
         //$this->form_validation->set_error_delimiters('<div class="warning neg">', '</div>');
 
@@ -185,29 +185,40 @@ public function testimonial(){
 	           'title'=>'Contact Us',
                'current_page' => 'contact_us',
                'bootstrapCss' => 'bootstrap.min.css',
-               'bootstrapValidateJs' => 'bootstrapValidator.min.js'
+               'bootstrapValidateJs' => 'bootstrapValidator.js'
 	        );
+
+        $data['recaptcha_html'] = $this->recaptcha->recaptcha_get_html();
+        
        
         if(!empty($_POST))
+
+
         {
-            //debug_var($this->input->post());
             $formData = $this->input->post();
-            $this->form_validation->set_rules('txtName', 'Name', 'trim|required');
-            $this->form_validation->set_rules('txtEmail', 'Email', 'required|valid_email');
-            $this->form_validation->set_rules('txtnumber', 'Contact number', 'trim|required|integer');
-            $this->form_validation->set_rules('txtSub', 'Subject', 'trim|required');
-            $this->form_validation->set_rules('txtMessage', 'Message', 'trim|required');
+            $this->form_validation->set_rules('name', 'Name', 'trim|required');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+            $this->form_validation->set_rules('mobile', 'Mobile', 'trim|required|integer');
+            $this->form_validation->set_rules('message', 'Message', 'trim|required');
             if ($this->form_validation->run() == FALSE)
             {
                 $this->load->view('info_view',$data);
             }
             else
             {
-                $formData = $this->input->post();
-                $this->_contactUs_mail($formData);
-                $data['msg'] = "Contact request has been sent successfully.";
-                $data['msgType'] = 'pos';
-                $this->load->view('contactus_view',$data);
+                $this->recaptcha->recaptcha_check_answer();
+                if ($this->recaptcha->getIsValid()) {
+                    $formData = $this->input->post();
+
+                    $this->_contactUs_mail($formData);
+                    $this->load->view('info_success_view',$data);
+                } 
+                else {
+                    $data['msg'] = "Incorrect image text.";
+                    $data['msgType'] = 'neg';
+                    $this->load->view('info_success_view',$data);
+                }
+
             }
         }
         else
@@ -223,19 +234,28 @@ public function testimonial(){
     function _contactUs_mail($formData)
     {
         $siteName = $this->config->item('siteName');
-        $subject = $siteName.' - '.$formData['txtSub'];
-        $this->email->from($formData['txtEmail'], $formData['txtName']);
-        $this->email->to($this->config->item('adminEmailId'));
+        $subject = $siteName.' - query';
+        //$this->email->to($this->config->item('adminEmailId'));
+        $this->email->from($formData['email'], $formData['name']);
+        //$this->email->to($this->config->item('adminEmailId'));
+        $this->email->to('sunil@zenithindia.org');
         $this->email->subject($subject);
 
         $content = '<table width="100%" border="0" bgcolor="#d5e1f1" cellspacing="1" cellpadding="6" style="border:solid 4px #d5e1f1;">';
         $content .= '<tr><td bgcolor="#fbf9f9" width="100" colspan="2"><strong>Client Contact form</strong></td></tr>';
-        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Name: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['txtName'].'</td></tr>';
-        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Email: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['txtEmail'].'</td></tr>';
-        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Subject: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['txtSub'].'</td></tr>';
-        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Contact Number: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['txtnumber'].'</td></tr>';
-        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Message: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['txtMessage'].'</td></tr>';
+        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Name: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['name'].'</td></tr>';
+        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Email: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['email'].'</td></tr>';
+        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Contact Number: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['mobile'].'</td></tr>';
+        $content .= '<tr><td bgcolor="#fbf9f9" width="100"><strong>Message: </strong></td><td width="270" bgcolor="#fbf9f9">'.$formData['message'].'</td></tr>';
         $content.='</table>';
+
+        //print_r($content);
+
+        $this->email->message($content);
+        $this->email->set_mailtype('html');
+        $this->email->send();
+       // $this->email->print_debugger();
+       // exit();
     }
     
    

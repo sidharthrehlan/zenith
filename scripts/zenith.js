@@ -54,14 +54,15 @@
 
 
   //Bootstrap validate
-  $(document).ready(function() {
-    $('#info').bootstrapValidator({
+ 
+  /*  $('#info').bootstrapValidator({
         container: 'tooltip',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
+        live : 'submitted',
         fields: {
             name: {
                 validators: {
@@ -89,20 +90,17 @@
                         message: 'The phone number is required'
                     }
                 }
+            },
+            message: {
+                validators: {
+                    notEmpty: {
+                        message: 'The message is required'
+                    }
+                }
             }
         }
     });
-});
+*/
 
 
-
-
-
-
-
-
-
-
-
-
-      });      
+ });      
